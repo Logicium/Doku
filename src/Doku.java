@@ -35,7 +35,6 @@ public class Doku {
 			tiles[i] = new Tile();	
 		}
 		setup();
-		
 	}
 	
 	public static void setup() throws FileNotFoundException{
@@ -100,17 +99,9 @@ public class Doku {
 	
 	private static void printSolvedPuzzle() {
 		for (int i = 1; i < tiles.length+1; i++) {
-			
-				if((i%9==0)&&(i%3==0)){
-						System.out.print(tiles[i-1].value+"\n");
-				}
-				else if((i%3==0)){
-					System.out.print(tiles[i-1].value+"\t");
-				}
-				
-				else{
-					System.out.print(tiles[i-1].value+" ");
-				}
+				if((i%9==0)&&(i%3==0)) { System.out.print(tiles[i-1].value+"\n"); }
+				else if((i%3==0)) { System.out.print(tiles[i-1].value+"\t"); }
+				else { System.out.print(tiles[i-1].value+" "); }
 		}
 	}
 
